@@ -35,7 +35,7 @@ for(int i = 0; i < map.size(); i++) {
 	node(config.build) {
 		echo('Build');
 	};
-/*
+
 	stage("Build Unit Tests $name")
 	node(config.host) {
 		echo('Build Unit Tests')
@@ -75,5 +75,4 @@ for(int i = 0; i < map.size(); i++) {
 	node(config.build) {
 		echo("Deploying")
 	}
-*/
 }
