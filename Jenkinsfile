@@ -1,1 +1,3 @@
-echo("HELLO WORLD")
+node("iit") {
+	echo("HELLO WORLD")
+}
