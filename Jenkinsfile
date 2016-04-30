@@ -1,4 +1,4 @@
-configs = [
+def configs = [
 	centos5_x86_64_centos6_x86_64: [
 		build:  "centos5 && x86_64",
 		host:   "centos6 && x86_64",
@@ -22,7 +22,7 @@ configs = [
 ]
 
 configs.each { name, config ->
-	stage("Build $name")
+	stage("Build ${name}")
 	node(config.build) {
 		echo('Build')
 	}
