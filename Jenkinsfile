@@ -1,27 +1,36 @@
+#!groovy
+
 def map = [
-	'centos5_x86_64_centos6_x86_64': [
+	[
+		'name':   "centos5_x86_64_centos6_x86_64",
 		'build':  "centos5 && x86_64",
 		'host':   "centos6 && x86_64",
 		'target': "centos6 && x86_64"
 	],
-	'centos5_x86_64_centos7_x86_64': [
+	[
+		'name':   "centos5_x86_64_centos7_x86_64",
 		'build':  "centos5 && x86_64",
 		'host':   "centos7 && x86_64",
 		'target': "centos7 && x86_64"
 	],
-	'native_centos6_x86_64': [
+	[
+		'name':   "centos6_x86_64_centos6_x86_64",
 		'build':  "centos6 && x86_64",
 		'host':   "centos6 && x86_64",
 		'target': "centos6 && x86_64"
 	],
-	'native_centos7_x86_64': [
+	[
+		'name':   "centos7_x86_64_centos7_x86_64",
 		'build':  "centos7 && x86_64",
 		'host':   "centos7 && x86_64",
 		'target': "centos7 && x86_64"
 	]
 ];
 
-map.each { name, config ->
+for(int i = 0; i < map.size(); i++) {
+	name = map[i].name
+	config = map[i]
+
 	stage("Build ${name}");
 	node(config.build) {
 		echo('Build');
