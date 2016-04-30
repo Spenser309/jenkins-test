@@ -21,52 +21,50 @@ def configs = [
 	]
 ];
 
-parallel {
-	configs.each { name, config ->
-		stage("Build ${name}");
-		node(config.build) {
-			echo('Build');
-		};
+configs.each { name, config ->
+	stage("Build ${name}");
+	node(config.build) {
+		echo('Build');
+	};
 /*
-		stage("Build Unit Tests $name")
-		node(config.host) {
-			echo('Build Unit Tests')
-		}
-
-		stage("Run Unit Tests $name")
-		node(config.target) {
-			echo('Run Unit Tests')
-		}
-
-		stage("Install $name")
-		node(config.build) {
-			echo('Install')
-		}
-
-		stage("Build Integration Tests $name")
-		node(config.host) {
-			echo("Build Integration Tests")
-		}
-
-		stage("Run Integration Tests $name")
-		node(config.target) {
-			echo("Run Integration Tests")
-		}
-
-		stage("Build Performance Tests $name")
-		node(config.host) {
-			echo("Build Performance Tests")
-		}
-
-		stage("Run Performance Tests $name")
-		node(config.target) {
-			echo("Run Performance Tests")
-		}
-
-		stage("Deploy $name")
-		node(config.build) {
-			echo("Deploying")
-		}
-*/
+	stage("Build Unit Tests $name")
+	node(config.host) {
+		echo('Build Unit Tests')
 	}
+
+	stage("Run Unit Tests $name")
+	node(config.target) {
+		echo('Run Unit Tests')
+	}
+
+	stage("Install $name")
+	node(config.build) {
+		echo('Install')
+	}
+
+	stage("Build Integration Tests $name")
+	node(config.host) {
+		echo("Build Integration Tests")
+	}
+
+	stage("Run Integration Tests $name")
+	node(config.target) {
+		echo("Run Integration Tests")
+	}
+
+	stage("Build Performance Tests $name")
+	node(config.host) {
+		echo("Build Performance Tests")
+	}
+
+	stage("Run Performance Tests $name")
+	node(config.target) {
+		echo("Run Performance Tests")
+	}
+
+	stage("Deploy $name")
+	node(config.build) {
+		echo("Deploying")
+	}
+*/
 }
