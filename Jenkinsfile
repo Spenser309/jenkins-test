@@ -1,23 +1,23 @@
 def configs = [
-	centos5_x86_64_centos6_x86_64: [
-		build:  "centos5 && x86_64",
-		host:   "centos6 && x86_64",
-		target: "centos6 && x86_64",
+	'centos5_x86_64_centos6_x86_64': [
+		'build':  "centos5 && x86_64",
+		'host':   "centos6 && x86_64",
+		'target': "centos6 && x86_64",
 	],
-	centos5_x86_64_centos7_x86_64: [
-		build:  "centos5 && x86_64",
-		host:   "centos7 && x86_64",
-		target: "centos7 && x86_64"
+	'centos5_x86_64_centos7_x86_64': [
+		'build':  "centos5 && x86_64",
+		'host':   "centos7 && x86_64",
+		'target': "centos7 && x86_64"
 	],
-	native_centos6_x86_64: [
-		build:  "centos6 && x86_64",
-		host:   "centos6 && x86_64",
-		target: "centos6 && x86_64",
+	'native_centos6_x86_64': [
+		'build':  "centos6 && x86_64",
+		'host':   "centos6 && x86_64",
+		'target': "centos6 && x86_64",
 	],
-	native_centos7_x86_64: [
-		build:  "centos7 && x86_64",
-		host:   "centos7 && x86_64",
-		target: "centos7 && x86_64",
+	'native_centos7_x86_64': [
+		'build':  "centos7 && x86_64",
+		'host':   "centos7 && x86_64",
+		'target': "centos7 && x86_64",
 	]
 ]
 
